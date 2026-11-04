@@ -1,3 +1,53 @@
+import Link from "next/link";
+import { perfil } from "../data/perfil";
+import styles from "./home.module.css";
+
+const atalhos = [
+  { href: "/sobre", emoji: "💻", titulo: "Sobre", texto: "Quem sou eu e as tecnologias que uso." },
+  { href: "/academica", emoji: "🎓", titulo: "Acadêmica", texto: "Minha formação e cursos." },
+  { href: "/profissional", emoji: "💼", titulo: "Profissional", texto: "Experiências e trajetória." },
+  { href: "/projetos", emoji: "🚀", titulo: "Projetos", texto: "Repositórios direto do GitHub." },
+];
+
+
 export default function Ruan() {
-  return <h1>Ruan</h1>;
+  return (
+    <>
+      <section className={styles.hero}>
+        <p className={styles.hello}>Olá, eu sou</p>
+        <h1 className={styles.nome}>{perfil.nome}</h1>
+        <h2 className={styles.cargo}>{perfil.cargo}</h2>
+        <p className={styles.frase}>{perfil.frase}</p>
+
+        <div className={styles.botoes}>
+          <Link href="/projetos" className={styles.btnPrimario}>
+            Ver projetos
+          </Link>
+          <a href={`mailto:${perfil.email}`} className={styles.btnSecundario}>
+            Falar comigo
+          </a>
+        </div>
+
+        <div className={styles.social}>
+          <a href={`https://github.com/${perfil.github}`} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href={perfil.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href={`mailto:${perfil.email}`}>E-mail</a>
+        </div>
+      </section>
+
+      <section className={styles.atalhos}>
+        {atalhos.map((item) => (
+          <Link key={item.href} href={item.href} className={styles.card}>
+            <span className={styles.emoji}>{item.emoji}</span>
+            <h3>{item.titulo}</h3>
+            <p>{item.texto}</p>
+          </Link>
+        ))}
+      </section>
+    </>
+  );
 }
