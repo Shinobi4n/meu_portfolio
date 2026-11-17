@@ -1,11 +1,22 @@
 .hero {
     min-height: 60vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.75rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
     animation: subir 0.8s ease both;
 }
+
+.foto {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(92, 44, 22, 0.45);
+}
+
 
 .hello {
     color: var(--accent);
