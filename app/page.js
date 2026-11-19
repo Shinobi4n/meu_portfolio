@@ -6,10 +6,10 @@ import styles from "./home.module.css";
 
 
 const atalhos = [
-  { href: "/sobre", emoji: "💻", titulo: "Sobre", texto: "Quem sou eu e as tecnologias que uso." },
-  { href: "/academica", emoji: "🎓", titulo: "Acadêmica", texto: "Minha formação e cursos." },
-  { href: "/profissional", emoji: "💼", titulo: "Profissional", texto: "Experiências e trajetória." },
-  { href: "/projetos", emoji: "🚀", titulo: "Projetos", texto: "Repositórios direto do GitHub." },
+  { href: "/sobre", titulo: "SOBRE", texto: "Quem sou eu e as tecnologias que uso." },
+  { href: "/academica", titulo: "ACADÊMIA", texto: "Minha formação e cursos." },
+  { href: "/profissional", titulo: "PROFISSIONAL", texto: "Experiências e trajetória." },
+  { href: "/projetos", titulo: "PROJETOS", texto: "Repositórios direto do GitHub." },
 ];
 
 
