@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image"
 import { perfil } from "../data/perfil";
@@ -14,6 +17,10 @@ const atalhos = [
 
 
 export default function Ruan() {
+
+  const [emailVisivel, setEmailVisivel] = useState(false);
+  const [emailCopiado, setEmailCopiado] = useState(false);
+
   return (
     <>
       <section className={styles.hero}>
@@ -27,19 +34,51 @@ export default function Ruan() {
             <Link href="/projetos" className={styles.btnPrimario}>
               Ver projetos
             </Link>
-            <a href={`mailto:${perfil.email}`} className={styles.btnSecundario}>
+
+            <a href="https://wa.me/5581996020476"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.btnSecundario} >
               Falar comigo
             </a>
           </div>
 
           <div className={styles.social}>
-            <a href={`https://github.com/${perfil.github}`} target="_blank" rel="noreferrer">
+            <a href="https://github.com/Shinobi4n"
+              target="_blank"
+              rel="noreferrer">
               GitHub
             </a>
-            <a href={perfil.linkedin} target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/ruan-santos-4ab84437a/"
+              target="_blank"
+              rel="noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:${perfil.email}`}>E-mail</a>
+
+
+            <button
+              type="button"
+              onClick={() => setEmailVisivel(!emailVisivel)}
+            >
+              E-mail
+            </button>
+
+            {emailVisivel && (
+              <div className={styles.emailPopup}>
+                <span>{perfil.email}</span>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    navigator.clipboard.writeText(perfil.email);
+                    setEmailCopiado(true);
+                  }}
+                >
+                  {emailCopiado ? "Copiado!" : "Copiar"}
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -54,7 +93,7 @@ export default function Ruan() {
           />
         </div>
 
-      </section>
+      </section >
 
 
 
