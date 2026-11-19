@@ -8,23 +8,32 @@
     animation: subir 0.8s ease both;
 }
 
+.nome {
+    color: var(--cor-nome);
+}
+
+.logo {
+    color: var(--cor-logo);
+}
+
 .foto {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 30px rgba(92, 44, 22, 0.45);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45);
 }
 
 
 .hello {
-    color: var(--accent);
+    color: var(--cor-hello);
     font-family: ui-monospace, Consolas, monospace;
     font-size: 1.1rem;
 }
 
 .nome {
+    color: var(--cor-nome);
     font-size: clamp(2.6rem, 8vw, 5.5rem);
     line-height: 1.05;
     background: linear-gradient(90deg, var(--primary), var(--accent));

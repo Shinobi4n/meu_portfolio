@@ -18,8 +18,9 @@ export default function Navbar() {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
+
                 <Link href="/" className={styles.logo}>
-                    &lt;seu.nome /&gt;
+                    @Shinobi_4n
                 </Link>
 
                 <ul className={styles.links}>

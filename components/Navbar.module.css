@@ -4,7 +4,7 @@
     left: 1;
     right: 1;
     z-index: 100;
-    background: rgba(64, 114, 243, 0.7);
+    background: rgba(96, 121, 168, 0.678);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
 }
@@ -20,9 +20,10 @@
 }
 
 .logo {
-    font-weight: 700;
+
+    font-weight: 500;
     font-family: ui-monospace, "Courier New", monospace;
-    color: var(--accent);
+    color: var(--cor-logo);
 }
 
 
