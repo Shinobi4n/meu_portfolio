@@ -1,0 +1,79 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.introducao {
+    margin-bottom: 45px;
+}
+
+.introducao h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.experiencias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+
+
+.periodo {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 1.7rem;
+    margin: 15px 0 8px;
+}
+
+.card h3 {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.tags span {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    font-size: 0.9rem;
+}

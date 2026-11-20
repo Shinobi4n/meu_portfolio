@@ -1,0 +1,96 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.introducao {
+    margin-bottom: 45px;
+}
+
+.introducao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 25px;
+    margin: 5px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.categoria {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.tecnologias span {
+    padding: 8px 13px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    font-size: 0.85rem;
+}
+
+.grade h2 {
+    grid-column: 1 / -1;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .grade {
+        grid-template-columns: 1fr;
+    }
+}
